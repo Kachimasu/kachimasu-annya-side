@@ -6,23 +6,51 @@
   <style>
     body {
       text-align: center;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffe6f0;
+      animation: fadeIn 2s ease-in;
     }
+
     h1 {
-      color: #333;
-      margin-top: 50px;
+      margin-top: 60px;
+      font-size: 40px;
+      color: #cc0052;
+      animation: popIn 1.5s ease-out;
     }
+
     img {
       max-width: 90%;
       height: auto;
-      margin-top: 20px;
-      border-radius: 10px;
+      margin-top: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+    @keyframes popIn {
+      0% {transform: scale(0.8); opacity: 0;}
+      100% {transform: scale(1); opacity: 1;}
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
   </style>
 </head>
 <body>
   <h1>Kachimasu & Annya</h1>
-  <img src="https://i.postimg.cc/PxnY7KXz/72f0d009540e2c4e0a56104c6e554647.jpg" alt="Kachimasu & Annya">
+  <img src="https://i.postimg.cc/4xkyhLtq/image.jpg" alt="Kachimasu & Annya">
 </body>
 </html>
